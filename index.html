@@ -5,106 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chaty Slovensko</title>
 
-</style>
-  <section style="padding:40px;">
-<h2>Kontakt</h2>
-
-<p><b>Chaty Slovensko</b></p>
-<p>Horná Lehota 279, 976 81 Podbrezová</p>
-
-<p>📧 chatyslovensko.info@gmail.com</p>
-<p>📞 0917 067 660</p>
-
-<a href="mailto:chatyslovensko.info@gmail.com"
-style="display:inline-block;
-background:#e63946;
-color:white;
-padding:15px 25px;
-text-decoration:none;
-border-radius:8px;
-margin-top:15px;">
-Rezervovať pobyt
-</a>
-</section>
-body{
-margin:0;
-font-family:Arial;
-background:#f4f6f8;
-text-align:center;
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f8;
+    text-align: center;
 }
 
-header{
-background:linear-gradient(135deg,#0b3d91,#1d6fdc);
-color:white;
-padding:70px 20px;
+header {
+    background: #0d3b66;
+    color: white;
+    padding: 40px 20px;
 }
 
-h1{
-margin:0;
-font-size:42px;
+section {
+    padding: 30px;
 }
 
-section{
-max-width:800px;
-margin:auto;
-padding:40px 20px;
+.btn {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 15px;
 }
 
-.btn{
-background:#e63946;
-color:white;
-padding:15px 25px;
-border-radius:8px;
-text-decoration:none;
-font-size:18px;
-display:inline-block;
-margin-top:20px;
+form {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #0d3b66;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 </style>
 </head>
-<section>
-<h2>Rezervačný formulár</h2>
 
-<form action="https://formspree.io/f/index.html" method="POST">
-
-<label>Meno:</label><br>
-<input type="text" name="meno" required><br><br>
-
-<label>Email:</label><br>
-<input type="email" name="email" required><br><br>
-
-<label>Telefón:</label><br>
-<input type="text" name="telefon"><br><br>
-
-<label>Dátum príchodu:</label><br>
-<input type="date" name="prichod" required><br><br>
-
-<label>Dátum odchodu:</label><br>
-<input type="date" name="odchod" required><br><br>
-
-<label>Správa:</label><br>
-<textarea name="sprava"></textarea><br><br>
-
-<button type="submit">Odoslať rezerváciu</button>
-
-</form>
-</section>
 <body>
 
 <header>
 <h1>Chaty Slovensko</h1>
-<p>Rezervačný portál pre chaty a apartmány na Slovensku</p>
+<p>Rezervácie chát a apartmánov</p>
 </header>
 
 <section>
-<h2>Nájdite ideálne ubytovanie</h2>
+<h2>Kontakt</h2>
+<p>Horná Lehota 279, 976 81 Podbrezová</p>
+<p>Email: chatyslovensko.info@gmail.com</p>
+<p>Tel: 0917 067 660</p>
+</section>
 
-<p>
-Jednoduché online rezervácie, prehľad dostupnosti a výber ubytovania na jednom mieste.
-</p>
+<section>
+<h2>Rezervačný formulár</h2>
 
-<a class="btn">Prejsť na rezervácie</a>
+<form action="https://formspree.io/f/mpqjjgqq" method="POST">
 
+<label>Meno</label>
+<input type="text" name="meno" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Telefón</label>
+<input type="text" name="telefon">
+
+<label>Dátum príchodu</label>
+<input type="date" name="prichod" required>
+
+<label>Dátum odchodu</label>
+<input type="date" name="odchod" required>
+
+<label>Správa</label>
+<textarea name="sprava"></textarea>
+
+<button type="submit">Odoslať rezerváciu</button>
+
+</form>
 </section>
 
 </body>
