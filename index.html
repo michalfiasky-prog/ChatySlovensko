@@ -6,59 +6,53 @@
 <title>Chaty Slovensko</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f6f8;
-    text-align: center;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f8;
+    text-align:center;
 }
 
-header {
-    background: #0d3b66;
-    color: white;
-    padding: 40px 20px;
+header{
+    background:linear-gradient(135deg,#0b5aa2,#2bb673);
+    color:white;
+    padding:60px 20px;
 }
 
-section {
-    padding: 30px;
+section{
+    max-width:800px;
+    margin:auto;
+    padding:40px 20px;
 }
 
-.btn {
-    display: inline-block;
-    background: #e63946;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 15px;
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
 }
 
-form {
-    max-width: 400px;
-    margin: auto;
-    text-align: left;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 6px 0;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+button{
+    background:#e63946;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+    width:100%;
 }
 
-button {
-    background: #0d3b66;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
+a{color:#0b5aa2;text-decoration:none;font-weight:bold;}
 </style>
 </head>
 
@@ -66,18 +60,22 @@ button {
 
 <header>
 <h1>Chaty Slovensko</h1>
-<p>Rezervácie chát a apartmánov</p>
+<p>Ubytovací portál pre chaty a apartmány na Slovensku</p>
 </header>
 
 <section>
-<h2>Kontakt</h2>
-<p>Horná Lehota 279, 976 81 Podbrezová</p>
-<p>Email: chatyslovensko.info@gmail.com</p>
-<p>Tel: 0917 067 660</p>
+<div class="card">
+<h2>O portáli</h2>
+<p>
+Chaty Slovensko je portál pre prezentáciu chát a ubytovania na Slovensku.
+Máte otázku alebo záujem o spoluprácu? Napíšte nám správu.
+</p>
+</div>
 </section>
 
 <section>
-<h2>Rezervačný formulár</h2>
+<div class="card">
+<h2>Kontaktujte nás</h2>
 
 <form action="https://formspree.io/f/mpqjjgqq" method="POST">
 
@@ -87,21 +85,23 @@ button {
 <label>Email</label>
 <input type="email" name="email" required>
 
-<label>Telefón</label>
-<input type="text" name="telefon">
-
-<label>Dátum príchodu</label>
-<input type="date" name="prichod" required>
-
-<label>Dátum odchodu</label>
-<input type="date" name="odchod" required>
-
 <label>Správa</label>
-<textarea name="sprava"></textarea>
+<textarea name="sprava" placeholder="Vaša otázka..." required></textarea>
 
-<button type="submit">Odoslať rezerváciu</button>
+<button type="submit">Odoslať správu</button>
 
 </form>
+
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>Kontakt</h2>
+<p>Horná Lehota 279, 976 81 Podbrezová</p>
+<p>Email: <a href="mailto:chatyslovensko.info@gmail.com">chatyslovensko.info@gmail.com</a></p>
+<p>Tel: <a href="tel:+421917067660">0917 067 660</a></p>
+</div>
 </section>
 
 </body>
