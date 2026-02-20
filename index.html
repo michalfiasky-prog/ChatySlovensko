@@ -62,7 +62,33 @@ margin-top:20px;
 }
 </style>
 </head>
+<section>
+<h2>Rezervačný formulár</h2>
 
+<form action="https://formspree.io/f/TVOJ_LINK" method="POST">
+
+<label>Meno:</label><br>
+<input type="text" name="meno" required><br><br>
+
+<label>Email:</label><br>
+<input type="email" name="email" required><br><br>
+
+<label>Telefón:</label><br>
+<input type="text" name="telefon"><br><br>
+
+<label>Dátum príchodu:</label><br>
+<input type="date" name="prichod" required><br><br>
+
+<label>Dátum odchodu:</label><br>
+<input type="date" name="odchod" required><br><br>
+
+<label>Správa:</label><br>
+<textarea name="sprava"></textarea><br><br>
+
+<button type="submit">Odoslať rezerváciu</button>
+
+</form>
+</section>
 <body>
 
 <header>
