@@ -7,7 +7,6 @@
 <title>Chaty Slovensko</title>
 
 <style>
-
 body{
     margin:0;
     font-family:Arial, sans-serif;
@@ -15,25 +14,24 @@ body{
 }
 
 /* ===== HLAVIČKA ===== */
-
 header{
     text-align:center;
-    padding:40px 20px 60px 20px;
+    padding:35px 20px 55px 20px; /* menšie medzery */
     background:linear-gradient(135deg,#3a7bd5,#00d2ff);
     color:white;
 }
 
 /* LOGO */
 .logo{
-    width:200px;
+    width:190px;
     max-width:75%;
     display:block;
-    margin:0 auto 10px auto; /* menšia medzera */
+    margin:0 auto 8px auto; /* menšia medzera pod logom */
 }
 
 /* NADPIS */
 h1{
-    margin:10px 0 10px 0;
+    margin:8px 0 10px 0;
     font-size:42px;
     font-weight:600;
 }
@@ -47,7 +45,6 @@ header p{
 }
 
 /* ===== SEKcie ===== */
-
 section{
     padding:40px 20px;
 }
@@ -56,7 +53,7 @@ section{
 .card{
     background:white;
     max-width:800px;
-    margin:auto;
+    margin:0 auto 25px auto;
     padding:30px;
     border-radius:20px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
@@ -74,46 +71,100 @@ section{
     color:#333;
 }
 
+/* ===== FORM ===== */
+.form{
+    text-align:left;
+    max-width:520px;
+    margin:0 auto;
+}
+
+label{
+    display:block;
+    font-weight:600;
+    margin:14px 0 6px 0;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    border-radius:12px;
+    border:1px solid #ccc;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+button{
+    width:100%;
+    margin-top:16px;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    background:#e63946;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    filter:brightness(0.95);
+}
+
 /* ===== MOBILE ===== */
-
 @media(max-width:600px){
-
-h1{
-    font-size:34px;
+    h1{ font-size:34px; }
+    .logo{ width:165px; }
+    .card{ padding:24px; }
 }
-
-.logo{
-    width:170px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
+    <img
+      src="https://raw.githubusercontent.com/michalfiasky-prog/ChatySlovensko/refs/heads/main/IMG_20260221_121922.png"
+      class="logo"
+      alt="Logo Chaty Slovensko"
+    >
 
-<img src="https://raw.githubusercontent.com/michalfiasky-prog/ChatySlovensko/refs/heads/main/IMG_20260221_121922.png" class="logo">
-
-<h1>Chaty Slovensko</h1>
-
-<p>Ubytovací portál pre chaty a apartmány na Slovensku</p>
-
+    <h1>Chaty Slovensko</h1>
+    <p>Ubytovací portál pre chaty a apartmány na Slovensku</p>
 </header>
 
 <section>
-<div class="card">
 
-<h2>O portáli</h2>
+    <div class="card">
+        <h2>O portáli</h2>
+        <p>
+            Chaty Slovensko je portál pre prezentáciu chát a ubytovania na Slovensku.
+            Máte otázku alebo máte záujem o spoluprácu? Napíšte nám správu.
+        </p>
+    </div>
 
-<p>
-Chaty Slovensko je portál pre prezentáciu chát a ubytovania na Slovensku.
-Máte otázku alebo máte záujem o spoluprácu? Napíšte nám správu.
-</p>
+    <div class="card">
+        <h2>Kontaktujte nás</h2>
 
-</div>
+        <!-- FORM: sem daj svoj Formspree link -->
+        <form class="form" action="#" method="POST">
+            <label for="meno">Meno</label>
+            <input id="meno" name="meno" type="text" placeholder="Vaše meno" required>
+
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="Váš e-mail" required>
+
+            <label for="sprava">Správa</label>
+            <textarea id="sprava" name="sprava" placeholder="Napíšte nám správu..." required></textarea>
+
+            <button type="submit">Odoslať správu</button>
+        </form>
+    </div>
+
 </section>
 
 </body>
