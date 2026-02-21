@@ -3,57 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Chaty Slovensko</title>
 
 <style>
+
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background:#f4f6f8;
 }
 
-/* ===== HLAVIČKA ===== */
+/* ===== HEADER ===== */
 header{
+    background: linear-gradient(135deg,#2f80ed,#1abc9c);
     text-align:center;
-    padding:35px 20px 55px 20px; /* menšie medzery */
-    background:linear-gradient(135deg,#3a7bd5,#00d2ff);
     color:white;
+    padding:40px 20px 50px;
 }
 
-/* LOGO */
-.logo{
-    width:190px;
-    max-width:75%;
-    display:block;
-    margin:0 auto 8px auto; /* menšia medzera pod logom */
+header img{
+    width:170px;
+    max-width:80%;
+    margin-bottom:10px;
 }
 
-/* NADPIS */
 h1{
-    margin:8px 0 10px 0;
+    margin:10px 0 5px;
     font-size:42px;
-    font-weight:600;
 }
 
-/* PODTEXT */
-header p{
-    font-size:18px;
+.subtitle{
+    font-size:20px;
     opacity:0.9;
-    max-width:600px;
-    margin:0 auto;
 }
 
-/* ===== SEKcie ===== */
+/* ===== KARTY ===== */
 section{
-    padding:40px 20px;
+    padding:30px 15px;
+    display:flex;
+    justify-content:center;
 }
 
-/* KARTA */
 .card{
     background:white;
-    max-width:800px;
-    margin:0 auto 25px auto;
+    max-width:700px;
+    width:100%;
     padding:30px;
     border-radius:20px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
@@ -62,110 +56,133 @@ section{
 
 .card h2{
     margin-top:0;
-    font-size:32px;
 }
 
-.card p{
-    font-size:18px;
-    line-height:1.6;
-    color:#333;
-}
-
-/* ===== FORM ===== */
-.form{
-    text-align:left;
-    max-width:520px;
-    margin:0 auto;
-}
-
-label{
-    display:block;
-    font-weight:600;
-    margin:14px 0 6px 0;
+/* ===== FORMULÁR ===== */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:15px;
 }
 
 input, textarea{
-    width:100%;
     padding:12px;
-    border-radius:12px;
+    border-radius:8px;
     border:1px solid #ccc;
     font-size:16px;
-    box-sizing:border-box;
-}
-
-textarea{
-    min-height:120px;
-    resize:vertical;
 }
 
 button{
-    width:100%;
-    margin-top:16px;
-    padding:14px;
-    border:none;
-    border-radius:12px;
-    font-size:18px;
-    font-weight:600;
-    background:#e63946;
+    background:#1abc9c;
     color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    font-size:16px;
     cursor:pointer;
 }
 
 button:hover{
-    filter:brightness(0.95);
+    background:#16a085;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:600px){
-    h1{ font-size:34px; }
-    .logo{ width:165px; }
-    .card{ padding:24px; }
+/* ===== FOOTER ===== */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    font-size:14px;
+    line-height:1.6;
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- ===== HLAVIČKA ===== -->
 <header>
-    <img
-      src="https://raw.githubusercontent.com/michalfiasky-prog/ChatySlovensko/refs/heads/main/IMG_20260221_121922.png"
-      class="logo"
-      alt="Logo Chaty Slovensko"
-    >
 
-    <h1>Chaty Slovensko</h1>
-    <p>Ubytovací portál pre chaty a apartmány na Slovensku</p>
+<img src="https://raw.githubusercontent.com/michalfiasky-prog/ChatySlovensko/refs/heads/main/IMG_20260221_121922.png">
+
+<h1>Chaty Slovensko</h1>
+<p class="subtitle">
+Ubytovací portál pre chaty a apartmány na Slovensku
+</p>
+
 </header>
 
+<!-- ===== O PORTÁLI ===== -->
 <section>
+<div class="card">
 
-    <div class="card">
-        <h2>O portáli</h2>
-        <p>
-            Chaty Slovensko je portál pre prezentáciu chát a ubytovania na Slovensku.
-            Máte otázku alebo máte záujem o spoluprácu? Napíšte nám správu.
-        </p>
-    </div>
+<h2>O portáli</h2>
 
-    <div class="card">
-        <h2>Kontaktujte nás</h2>
+<p>
+Chaty Slovensko je portál pre prezentáciu chát a ubytovania na Slovensku.
+Máte otázku alebo máte záujem o spoluprácu? Napíšte nám správu.
+</p>
 
-        <!-- FORM: sem daj svoj Formspree link -->
-        <form class="form" action="#" method="POST">
-            <label for="meno">Meno</label>
-            <input id="meno" name="meno" type="text" placeholder="Vaše meno" required>
-
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" placeholder="Váš e-mail" required>
-
-            <label for="sprava">Správa</label>
-            <textarea id="sprava" name="sprava" placeholder="Napíšte nám správu..." required></textarea>
-
-            <button type="submit">Odoslať správu</button>
-        </form>
-    </div>
-
+</div>
 </section>
+
+<!-- ===== KONTAKTNÝ FORMULÁR ===== -->
+<section>
+<div class="card">
+
+<h2>Kontaktujte nás</h2>
+
+<form action="https://formspree.io/f/mpqjjgqq" method="POST">
+
+<input type="text" name="meno" placeholder="Vaše meno" required>
+
+<input type="email" name="email" placeholder="Váš email" required>
+
+<textarea name="sprava" rows="5" placeholder="Vaša správa..." required></textarea>
+
+<button type="submit">Odoslať správu</button>
+
+</form>
+
+</div>
+</section>
+
+<!-- ===== KONTAKTNÉ ÚDAJE ===== -->
+<section>
+<div class="card">
+
+<h2>Kontaktné údaje</h2>
+
+<p><strong>Potlač Brezno s. r. o.</strong></p>
+
+<p>
+Horná Lehota 279<br>
+976 81 Podbrezová
+</p>
+
+<p>
+📞 0915 098 086<br>
+📞 0917 067 660
+</p>
+
+<p>
+✉️ chatyslovensko.info@gmail.com
+</p>
+
+<p>
+IČO: 57438552<br>
+DIČ: 2122732337
+</p>
+
+</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+© 2026 ChatySlovensko.sk
+</footer>
 
 </body>
 </html>
